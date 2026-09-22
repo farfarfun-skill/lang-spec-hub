@@ -6,7 +6,7 @@
 
 | Skill | 适用场景 |
 | --- | --- |
-| [`python-development-standards`](skills/python-development-standards/) | Python 代码、测试、项目配置及 NLT 工具复用规范 |
+| [`python-development-standards`](skills/python-development-standards/) | Python 代码、测试、项目配置及 farfarfun 组织工具复用规范 |
 | [`java-development-standards`](skills/java-development-standards/) | Java 代码、测试、Maven/Gradle 项目的实现和审查 |
 
 ## 安装

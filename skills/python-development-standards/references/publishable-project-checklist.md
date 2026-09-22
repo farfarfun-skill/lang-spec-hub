@@ -36,8 +36,9 @@ Apply these quality checks:
 ## Complete pyproject.toml
 
 - Use `pyproject.toml` as the primary project and tool configuration. Keep legacy packaging files only when a supported workflow still requires them.
-- Define `[build-system]` with the actual backend and a sufficient build requirement.
+- Define `[build-system]` with `hatchling` as the backend (`requires = ["hatchling"]`, `build-backend = "hatchling.build"`) unless the repository already commits to a different backend. Manage dependencies, the virtual environment, and the lock file with `uv`.
 - Complete applicable `[project]` fields: `name`, `version` or `dynamic`, `description`, `readme`, `requires-python`, `license`, `authors`, `dependencies`, `optional-dependencies`, `scripts`, `entry-points`, and `urls`.
+- Set `requires-python` to the actual minimum version the code and its dependencies need, verified against the language features used and each dependency's own `requires-python` floor. Do not raise it to the latest available interpreter or to match the developer's local Python opportunistically; a higher floor should follow from a real requirement, not a default bump.
 - Keep the distribution name distinct from the import name when they genuinely differ, and document the import users should write.
 - Use one version source. Configure dynamic versioning completely when selected; do not declare `dynamic = ["version"]` without a working provider.
 - List only runtime requirements in `dependencies`. Put test, lint, documentation, and build tools in the project's established development dependency mechanism.
