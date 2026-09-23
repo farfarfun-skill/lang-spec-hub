@@ -2,6 +2,8 @@
 
 面向 AI 编码代理的多语言开发规范集合。每种语言是一个可独立安装、调用的 skill；规范会优先遵循项目已有版本、工具链和代码约定。
 
+> 跨仓库（含 `service-governance` 等）的完整 Skill 路由一览见 [`skill-router`](https://github.com/farfarfun-skill/skill-router)。
+
 ## Skills
 
 | Skill | 适用场景 |
