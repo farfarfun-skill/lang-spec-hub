@@ -76,6 +76,8 @@ Treat the following libraries from the `farfarfun` organization as approved choi
 
 When creating or finishing a complete Python project intended to be installed, built, distributed, or published, read and complete [the publishable project checklist](references/publishable-project-checklist.md) before handoff. Require a Chinese `README.md`, accurate `pyproject.toml`, clean package artifacts, and repository hygiene. Do not apply this release checklist to isolated scripts or partial code snippets.
 
+When the project is additionally a long-running service installed and started/stopped through its own CLI (a `<cli> server start`/`run`/`stop`/`status` lifecycle, typically dispatched by a `scripts/setup.sh`), also read and satisfy [the service CLI contract](references/service-cli-contract.md) before handoff.
+
 ## Test and Verify
 
 1. Use the existing test framework and test layout.
