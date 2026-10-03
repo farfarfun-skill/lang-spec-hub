@@ -10,7 +10,7 @@ Produce Python changes that fit the repository, remain easy to review, and prese
 ## Establish the Project Contract
 
 1. Read `pyproject.toml`, lock files, CI configuration, and nearby modules and tests before editing.
-2. Follow the repository's supported Python version, formatter, linter, type checker, test runner, architecture, and naming conventions. Manage dependencies and virtual environments with `uv`, and use `hatchling` as the build backend for new projects unless the repository already commits to a different toolchain.
+2. Follow the repository's supported Python version, formatter, linter, type checker, test runner, architecture, and naming conventions. Manage dependencies and virtual environments with `uv`, but keep `uv.lock` out of Git; add it to `.gitignore` and untrack any committed copy without deleting the local file. Use `hatchling` as the build backend for new projects unless the repository already commits to a different toolchain.
 3. Treat existing project rules as authoritative unless they are unsafe, broken, or conflict with the requested behavior. Explain any necessary exception.
 4. Reuse installed dependencies and local helpers. Add a dependency only when the standard library and existing packages cannot solve the problem cleanly.
 5. Keep the change scoped. Do not reformat, rename, or refactor unrelated code.
